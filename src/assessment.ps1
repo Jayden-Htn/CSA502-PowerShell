@@ -30,7 +30,6 @@ do {
             # Out string waits for string output to continue
             $wait = Read-Host "Press enter to continue..." 
         } 
- 
         2 { 
             # List the virtual machines in the private subnet 
             Get-VM | Out-String 
@@ -38,7 +37,6 @@ do {
             # Out string waits for string output to continue
             $wait = Read-Host "Press enter to continue..."
         } 
-
         3 {
             # Test connection with a machine 
             Write-Host "Enter a IP address to ping or 'exit' to return to the main menu"  
@@ -55,13 +53,11 @@ do {
                 }
             } 
         }
- 
         4 {
             # Exit program
             $stop = $true
         }
     }
-         
     default { 
         # Handle invalid inputs
         Write-Host "Invalid choice. Please enter 1, 2 or 3." 
